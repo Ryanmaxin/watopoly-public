@@ -17,7 +17,7 @@ player who hasn't declared bankruptcy wins.
 The image below is a game in progress. A player has landed on PAS and is being
 asked whether to buy it or put it up for auction.
 
-![Watopoly's board in the terminal](Watopoly.png)
+[![Watopoly's board in the terminal](Watopoly.png)](Watopoly.png)
 
 ## How we built it
 

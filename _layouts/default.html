@@ -1,21 +1,32 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Watopoly, our CS246 terminal game project at the University of Waterloo.">
-  <title>Watopoly · CS246</title>
-  <link rel="stylesheet" href="./assets/site.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="header-inner">
-      <span><strong>WATOPOLY</strong> <span class="slash">/</span> PROJECT</span>
-      <span>CS246 · UNIVERSITY OF WATERLOO</span>
-    </div>
-  </header>
-  <main class="readme">
-    {{ content }}
-  </main>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#10231f">
+    <meta name="description" content="Watopoly, our C++14 terminal game project for CS246 at the University of Waterloo.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Watopoly — CS246 project">
+    <meta property="og:description" content="A terminal implementation of the University of Waterloo's Watopoly game, with our design document and UML diagram.">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <span class="wordmark">WATOPOLY <span>/ PROJECT</span></span>
+        <span class="header-context">CS 246 · UNIVERSITY OF WATERLOO</span>
+      </div>
+    </header>
+    <main id="content" class="shell article">
+      {{ content }}
+    </main>
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <span>Ryan Maxin · Isha Chaudhry · Nandish Patel</span>
+        <a href="https://github.com/Ryanmaxin/watopoly-public">Project repository ↗</a>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  color-scheme: light;
+  --ink: #10231f;
+  --forest: #244d3d;
+  --paper: #faf9f5;
+  --line: #d8ddd4;
+  --muted: #596a60;
+  --accent: #d99656;
+  --sans: 'DM Sans', Arial, sans-serif;
+  --display: 'Space Grotesk', Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.75 var(--sans); }
+a { color: var(--forest); text-underline-offset: 3px; }
+a:hover { color: #0c2b1c; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+img { max-width: 100%; height: auto; }
+.shell { width: min(100% - 64px, 880px); margin-inline: auto; }
+.skip-link { position: absolute; top: -70px; left: 20px; z-index: 2; padding: 8px 14px; background: white; }
+.skip-link:focus { top: 12px; }
+
+.site-header { background: var(--ink); color: white; }
+.header-inner { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.wordmark { font: 700 13px/1 var(--display); letter-spacing: .12em; }
+.wordmark span { color: #a4bdab; font-weight: 400; }
+.header-context { color: #a4bdab; font: 600 11px/1 var(--display); letter-spacing: .1em; text-align: right; }
+
+.article { padding-block: 78px 104px; }
+.article > h1, .article > h2 { font-family: var(--display); font-weight: 500; letter-spacing: -.055em; line-height: 1.14; }
+.article > h1 { font-size: clamp(49px, 7vw, 78px); margin: 0 0 31px; padding-bottom: 32px; border-bottom: 1px solid var(--line); }
+.article > h2 { font-size: clamp(31px, 4.4vw, 44px); margin: 78px 0 22px; }
+.article > p { max-width: 750px; margin: 0 0 20px; color: #374b3f; font-size: 17px; }
+.article > p:first-of-type { font-size: 20px; color: var(--ink); line-height: 1.65; }
+.article strong { color: var(--ink); }
+.article table { display: table; width: 100%; border-collapse: collapse; margin: 28px 0 30px; font-size: 15px; line-height: 1.6; }
+.article th { background: #e7eee5; text-align: left; font: 600 12px/1.3 var(--display); letter-spacing: .06em; text-transform: uppercase; }
+.article th, .article td { padding: 17px 20px; border: 1px solid var(--line); vertical-align: top; }
+.article td:first-child { width: 29%; font-weight: 600; }
+.article table a { font-weight: 600; }
+.article p:has(> a > img) { max-width: none; margin-top: 30px; margin-bottom: 14px; background: white; border: 1px solid var(--line); padding: 20px; }
+.article p:has(> a > img) img { display: block; margin-inline: auto; }
+.article code { padding: 2px 5px; border-radius: 3px; background: #e9eee8; font-size: .9em; }
+
+.site-footer { background: var(--ink); color: #becdc0; }
+.footer-inner { display: flex; justify-content: space-between; gap: 20px; padding-block: 30px; font-size: 13px; }
+.site-footer a { color: #e4ede5; text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
+
+@media (max-width: 650px) {
+  .shell { width: min(100% - 36px, 880px); }
+  .header-inner { min-height: 65px; }
+  .header-context { display: none; }
+  .article { padding-block: 58px 80px; }
+  .article > h1 { padding-bottom: 24px; }
+  .article > h2 { margin-top: 62px; }
+  .article > p { font-size: 16px; }
+  .article > p:first-of-type { font-size: 18px; }
+  .article table { display: block; overflow-x: auto; font-size: 14px; }
+  .article th, .article td { padding: 12px 13px; }
+  .article td:first-child { min-width: 130px; }
+  .article p:has(> a > img) { padding: 9px; }
+  .footer-inner { flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* The terminal screenshot is tall; keep it readable without taking over the page. */
+.article p:has(> a > img) img { max-height: 760px; width: auto; }
