@@ -21,11 +21,12 @@ asked whether to buy it or put it up for auction.
 
 ## How we built it
 
-We split the program into game logic, turn handling, and a text display. The
-board, players, and squares hold the state and rules. A controller reads commands
-and keeps turns moving, while response objects pass the outcome of each action
-back to the player. The display observes changes to the players and squares so
-it can update the board as the game goes on.
+We used a Model-View-Controller (MVC)-inspired structure. The board, players,
+and squares hold the game state and rules; the controller reads commands and
+keeps turns moving; and the text display shows what is happening. Response
+objects carry the outcome of each action back to the controller and player.
+We used the Observer pattern to update the display when players move or squares
+change, and inheritance and polymorphism for the different kinds of squares.
 
 Our design changed as we worked through the project. The final design document
 covers the decisions we made and the parts we rethought along the way; the UML
@@ -33,11 +34,12 @@ shows where the classes ended up.
 
 ## Documents
 
-- [CS246 Watopoly project brief](https://github.com/Ryanmaxin/watopoly-public/blob/main/Watopoly.pdf) — the assignment we worked from
-- [Final design document](https://github.com/Ryanmaxin/watopoly-public/blob/main/design.pdf) — our write-up of the implementation and design choices
-- [Final UML diagram](https://github.com/Ryanmaxin/watopoly-public/blob/main/uml-final.pdf) — the class structure
+- [CS246 Watopoly project brief](https://ryanmaxin.github.io/watopoly-public/Watopoly.pdf) — the assignment we worked from
+- [Final design document](https://ryanmaxin.github.io/watopoly-public/design.pdf) — our write-up of the implementation and design choices
+- [Final UML diagram](https://ryanmaxin.github.io/watopoly-public/uml-final.pdf) — the class structure
 
-We can't share the source publicly because of course academic integrity rules.
+We keep the source out of the public repository because of course academic
+integrity rules, but we can share it privately on request.
 
 ## Team
 
