@@ -1,7 +1,5 @@
 # Watopoly
 
-![Watopoly's board in the terminal](Watopoly.png)
-
 We built the C++14 terminal version of Watopoly for CS246 at the University of
 Waterloo in Winter 2023. The course gave us the project brief: a campus-themed
 Monopoly game with its own board and rules. Our job was to turn that brief into
@@ -16,8 +14,10 @@ auction, collect tuition, trade with each other, improve buildings, and mortgage
 properties when money gets tight. Games can be saved and loaded, and the last
 player who hasn't declared bankruptcy wins.
 
-The image above is a game in progress. A player has landed on PAS and is being
+The image below is a game in progress. A player has landed on PAS and is being
 asked whether to buy it or put it up for auction.
+
+![Watopoly's board in the terminal](Watopoly.png)
 
 ## How we built it
 
