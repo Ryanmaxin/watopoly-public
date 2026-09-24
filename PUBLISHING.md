@@ -1,14 +1,14 @@
 # Publishing the Watopoly page
 
-This folder is the public site. The Pages workflow publishes only `index.html`,
-`styles.css`, `Watopoly.png`, `design.pdf`, and `uml-final.pdf`. The course assignment PDF is kept
-locally as reference material and is excluded from Git.
+This folder is the public site. It contains the page, gameplay screenshot, and
+shareable design documents. The course assignment PDF is reference material only;
+`.gitignore` excludes it from the public repository.
 
 To publish for the first time:
 
 1. Push this folder to `Ryanmaxin/watopoly-public` on the `main` branch.
-2. In the GitHub repository, open **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions**.
-3. Open the **Actions** tab and wait for **Publish Watopoly page** to finish. The page will be at <https://ryanmaxin.github.io/watopoly-public/>.
+2. In the GitHub repository, open **Settings → Pages**. Under **Build and deployment**, choose **Deploy from a branch**, select **main** and **/(root)**, then save.
+3. The page will be at <https://ryanmaxin.github.io/watopoly-public/> after GitHub finishes publishing.
 
-Each later push to `main` publishes the latest page and the two linked PDFs.
-Only put material you are comfortable sharing publicly in this repository.
+Each later push to `main` republishes the page and linked documents. No custom
+GitHub Actions workflow is needed for this static site.

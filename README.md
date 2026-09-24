@@ -2,38 +2,36 @@
 
 ![Watopoly gameplay in the terminal](Watopoly.png)
 
-We built Watopoly for CS246 at the University of Waterloo in Winter 2023. It's a
-campus-themed take on Monopoly that runs in the terminal: two to six players
-move around a 40-square board, buy buildings, charge tuition, trade, and try to
-stay in the game.
+Watopoly was a CS246 project at the University of Waterloo in Winter 2023. The
+course provided the game concept, board, and rules. Our three-person team built
+the C++14 terminal version and worked out how to organize it.
 
-The three of us had two weeks to build it in C++14. We wanted the board to feel
-like the Waterloo version of the game, with academic buildings, residences,
-gyms, and familiar campus stops. Players can improve properties, mortgage them,
-auction unclaimed buildings, and save a game to pick up later.
+## The game
 
-We spent a lot of time on how the pieces fit together. The controller handles
-commands and turns, while the game rules live with the board, players, and
-squares. The text display watches for changes so it can redraw the board as the
-game moves along. Our design changed while we were building it; the documents
-below show where we ended up and why.
+Two to six players move around a 40-square campus board, buying academic
+buildings, residences, and gyms. They can auction, trade, improve, and mortgage
+properties, then save a game to pick up later. The last player who hasn't
+declared bankruptcy wins.
+
+## How we built it
+
+We kept the game rules with the board, players, and squares. The controller
+handles commands and turns; response objects carry results back to the player.
+The text display observes changes so the board updates as players move and
+buildings gain improvements. Our design changed during the project, and the
+final design document explains those decisions.
 
 ## Explore the project
 
-- [Project page](index.html) — a quick look at the game and our approach
-- [Final design document](design.pdf) — our write-up of the architecture and the decisions we made
-- [Final UML diagram](uml-final.pdf) — the class structure behind the game
+- [Project page](https://ryanmaxin.github.io/watopoly-public/) — an introduction to the game and our work
+- [Final design document](https://ryanmaxin.github.io/watopoly-public/design.pdf) — our architecture and design decisions
+- [Final UML diagram](https://ryanmaxin.github.io/watopoly-public/uml-final.pdf) — the class structure
 
-The implementation isn't included here because of course academic integrity
-rules. This page and the design documents are our way of sharing the project
-without publishing the source.
+We share the screenshot and design documents publicly. The implementation is
+kept out of the public repository under course academic integrity rules.
 
 ## Team
 
 - [Ryan Maxin](https://github.com/Ryanmaxin)
 - [Isha Chaudhry](https://github.com/Ishac1)
 - [Nandish Patel](https://github.com/nandishofficial)
-
-Watopoly was a CS246 project specified by the University of Waterloo. The game
-concept and assignment brief came from the course; the implementation and design
-work described here are ours.
